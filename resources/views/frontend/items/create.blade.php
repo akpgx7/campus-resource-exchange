@@ -90,10 +90,13 @@
                     <div class="mb-3">
                         <label class="form-label">Upload Photo</label>
                         <div class="input-group mb-3">
-                            <input type="file" name="item_image"
-                                class="form-control @error('item_image') is-invalid @enderror"
+                            <input type="file" name="item_image" class="form-control @error('image') is-invalid @enderror"
                                 id="imageInput" accept="image/*">
-                            @error('item_image')
+                            <label class="input-group-text" for="imageInput">
+                                <i class="bi bi-cloud-upload"></i>
+                            </label>
+                            @error('image')
+                                <span class="invalid-feedback">{{ $message }}</span>
                             @enderror
                         </div>
                         <small class="text-muted">JPG, PNG, GIF - Max 2MB. Clear, well-lit photos get more interest!</small>
