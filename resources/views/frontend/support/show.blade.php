@@ -231,8 +231,8 @@
                     </small>
                     <small class="text-muted d-block mb-3">
                         Status:
-                        <span class="badge bg-{{ ($ticket->transaction->getStatusBadgeColor)() }}">
-                            {{ ($ticket->transaction->getStatusLabel)() }}
+                        <span class="badge bg-{{ $ticket->transaction->getStatusBadgeColor() }}">
+                            {{ $ticket->transaction->getStatusLabel() }}
                         </span>
                     </small>
                     <a href="{{ route('frontend.transactions.show', $ticket->transaction->id) }}"
